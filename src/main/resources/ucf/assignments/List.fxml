@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ListController">
+   <children>
+      <Button layoutX="3.0" layoutY="189.0" mnemonicParsing="false" onAction="#addListClick" prefHeight="25.0" prefWidth="106.0" text="Add List" />
+      <Button layoutX="110.0" layoutY="189.0" mnemonicParsing="false" onAction="#removeListClick" prefHeight="25.0" prefWidth="106.0" text="Remove List" />
+      <Button layoutX="-1.0" layoutY="140.0" mnemonicParsing="false" onAction="#editListClick" prefHeight="25.0" prefWidth="106.0" text="Edit List" />
+      <Button layoutX="106.0" layoutY="115.0" mnemonicParsing="false" onAction="#editTitleClick" prefHeight="25.0" prefWidth="106.0" text="Edit Title" />
+      <Button layoutX="-1.0" layoutY="416.0" mnemonicParsing="false" onAction="#editDescriptionClick" prefHeight="25.0" prefWidth="106.0" text="Edit Description" />
+      <Button layoutY="475.0" mnemonicParsing="false" onAction="#addNewItemClick" prefHeight="25.0" prefWidth="106.0" text="Add New Item" />
+      <Button layoutX="110.0" layoutY="475.0" mnemonicParsing="false" onAction="#removeItemClick" prefHeight="25.0" prefWidth="106.0" text="Remove Item" />
+      <Button layoutX="110.0" layoutY="416.0" mnemonicParsing="false" onAction="#editDueDateClick" prefHeight="25.0" prefWidth="106.0" text="Edit Due Date" />
+      <Button layoutX="110.0" layoutY="325.0" mnemonicParsing="false" onAction="#markCompleteClick" prefHeight="25.0" prefWidth="106.0" text="Mark Complete" />
+      <Button layoutX="110.0" layoutY="350.0" mnemonicParsing="false" onAction="#markIncompleteCLick" prefHeight="25.0" prefWidth="106.0" text="Mark Incomplete" />
+      <Button layoutY="325.0" mnemonicParsing="false" onAction="#showCompleteClick" prefHeight="25.0" prefWidth="106.0" text="Show Complete" />
+      <Button layoutY="350.0" mnemonicParsing="false" onAction="#showIncompleteClick" prefHeight="25.0" prefWidth="106.0" text="Show Incomplete" />
+      <Button layoutY="300.0" mnemonicParsing="false" onAction="#showAllClick" prefHeight="25.0" prefWidth="106.0" text="Show All" />
+      <Button layoutY="15.0" mnemonicParsing="false" onAction="#loadListClick" prefHeight="25.0" prefWidth="106.0" text="Load List" />
+      <Accordion layoutX="175.0" layoutY="189.0" />
+      <TableView layoutX="216.0" layoutY="15.0" prefHeight="200.0" prefWidth="551.0">
+        <columns>
+          <TableColumn fx:id="ListName" prefWidth="114.0" text="Name" />
+          <TableColumn fx:id="ListDescription" prefWidth="436.0" text="Description" />
+            <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Path" visible="false" />
+        </columns>
+      </TableView>
+      <TableView layoutX="216.0" layoutY="300.0" prefHeight="200.0" prefWidth="551.0">
+        <columns>
+          <TableColumn fx:id="ItemName" prefWidth="117.0" text="Name" />
+          <TableColumn fx:id="ItemDescription" prefWidth="251.0" text="Description" />
+            <TableColumn fx:id="ItemDueDate" minWidth="0.0" prefWidth="85.0" text="Due Date" />
+            <TableColumn fx:id="ItemStatus" prefWidth="97.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="106.0" layoutY="140.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Edit Description" />
+      <Button layoutX="110.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Save" />
+      <Button layoutX="110.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Save All" />
+      <TextField layoutX="4.0" layoutY="221.0" prefHeight="25.0" prefWidth="106.0" promptText="List Name" />
+      <TextField layoutX="114.0" layoutY="221.0" prefHeight="25.0" prefWidth="653.0" promptText="List Description" />
+      <TextField layoutX="4.0" layoutY="506.0" prefHeight="25.0" prefWidth="106.0" promptText="Item Name" />
+      <TextField layoutX="114.0" layoutY="506.0" prefHeight="25.0" prefWidth="653.0" promptText="Item Description" />
+      <TextField layoutX="4.0" layoutY="538.0" prefHeight="25.0" prefWidth="174.0" promptText="Item Due Date (YYYY-MM-DD)" />
+   </children>
+</AnchorPane>

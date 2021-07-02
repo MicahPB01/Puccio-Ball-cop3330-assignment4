@@ -16,11 +16,11 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
 javafx {
-    version = "15.0.1"
-    modules = [ 'javafx.controls' ]
+    version = "16"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 test {
     useJUnitPlatform()
 }
 
-mainClassName = 'Untitled'
+mainClassName = 'ucf.assignments.List'

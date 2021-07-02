@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class List{
+    main()
+    start()
+
+}
+class ListController{
+
+}
+
+javafx.Application <|-- List
+
+List -- ListController
+
+
+
+@enduml
