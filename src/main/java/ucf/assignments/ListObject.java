@@ -11,7 +11,6 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class ListObject {
 
-
     public String getName() {
         return name.get();
     }
@@ -36,42 +35,12 @@ public class ListObject {
         this.description.set(description);
     }
 
-    public String getDueDate() {
-        return dueDate.get();
-    }
-
-    public SimpleStringProperty dueDateProperty() {
-        return dueDate;
-    }
-
-    public void setDueDate(String dueDate) {
-        this.dueDate.set(dueDate);
-    }
-
-    public String getStatus() {
-        return status.get();
-    }
-
-    public SimpleStringProperty statusProperty() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status.set(status);
-    }
-
-    public ListObject(SimpleStringProperty name, SimpleStringProperty description, SimpleStringProperty dueDate, SimpleStringProperty status) {
-        this.name = name;
-        this.description = description;
-        this.dueDate = dueDate;
-        this.status = status;
-    }
-
     private final SimpleStringProperty name;
     private final SimpleStringProperty description;
-    private final SimpleStringProperty dueDate;
-    private final SimpleStringProperty status;
 
 
-
+    public ListObject(SimpleStringProperty name, SimpleStringProperty description) {
+        this.name = name;
+        this.description = description;
+    }
 }

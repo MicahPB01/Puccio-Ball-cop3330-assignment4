@@ -12,12 +12,6 @@ import javafx.beans.property.SimpleStringProperty;
 public class ItemObject {
 
 
-
-    private final SimpleStringProperty name;
-    private final SimpleStringProperty description;
-    private final SimpleStringProperty dueDate;
-    private final SimpleStringProperty status;
-
     public String getName() {
         return name.get();
     }
@@ -66,6 +60,10 @@ public class ItemObject {
         this.status.set(status);
     }
 
+    private final SimpleStringProperty name;
+    private final SimpleStringProperty description;
+    private final SimpleStringProperty dueDate;
+    private final SimpleStringProperty status;
 
     public ItemObject(String name, String description, String dueDate, String status)   {
         this.name = new SimpleStringProperty(name);

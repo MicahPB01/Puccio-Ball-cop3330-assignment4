@@ -7,19 +7,33 @@ package ucf.assignments;
  * description
  * Name::description::duedate::0/1
  */
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 
 import java.util.Optional;
 
-public class ListController {
+public class ListController extends List {
+    @FXML private TextField listName;
+    @FXML private TableView<ListObject> listTable;
+    @FXML private TableColumn ListName = new TableColumn("Name");
+    @FXML private TableColumn ListDescription = new TableColumn("Description");
 
     @FXML
     public void editTitleClick(ActionEvent actionEvent) {
         //call editList in EditList class passing Path from selected table view
+
+
+
 
 
 

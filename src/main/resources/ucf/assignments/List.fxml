@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ListController">
    <children>
       <Button layoutX="3.0" layoutY="189.0" mnemonicParsing="false" onAction="#addListClick" prefHeight="25.0" prefWidth="106.0" text="Add List" />
@@ -25,7 +24,7 @@
       <Button layoutY="300.0" mnemonicParsing="false" onAction="#showAllClick" prefHeight="25.0" prefWidth="106.0" text="Show All" />
       <Button layoutY="15.0" mnemonicParsing="false" onAction="#loadListClick" prefHeight="25.0" prefWidth="106.0" text="Load List" />
       <Accordion layoutX="175.0" layoutY="189.0" />
-      <TableView layoutX="216.0" layoutY="15.0" prefHeight="200.0" prefWidth="551.0">
+      <TableView fx:id="listTable" layoutX="216.0" layoutY="15.0" prefHeight="200.0" prefWidth="551.0">
         <columns>
           <TableColumn fx:id="ListName" prefWidth="114.0" text="Name" />
           <TableColumn fx:id="ListDescription" prefWidth="436.0" text="Description" />
@@ -43,7 +42,7 @@
       <Button layoutX="106.0" layoutY="140.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Edit Description" />
       <Button layoutX="110.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Save" />
       <Button layoutX="110.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Save All" />
-      <TextField layoutX="4.0" layoutY="221.0" prefHeight="25.0" prefWidth="106.0" promptText="List Name" />
+      <TextField fx:id="listName" layoutX="4.0" layoutY="221.0" prefHeight="25.0" prefWidth="106.0" promptText="List Name" />
       <TextField layoutX="114.0" layoutY="221.0" prefHeight="25.0" prefWidth="653.0" promptText="List Description" />
       <TextField layoutX="4.0" layoutY="506.0" prefHeight="25.0" prefWidth="106.0" promptText="Item Name" />
       <TextField layoutX="114.0" layoutY="506.0" prefHeight="25.0" prefWidth="653.0" promptText="Item Description" />
